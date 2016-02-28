@@ -18,14 +18,14 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
-    compile group: "com.sun.faces", name: "jsf-api", version: "2.2.13"
-    compile group: "com.sun.faces", name: "jsf-impl", version: "2.2.13"
+
     compile("javax.inject:javax.inject:1")
 
-    compile group: 'javax.el', name: 'el-api', version: '2.2'
-    compile "org.glassfish.web:el-impl:2.2"
+    compile("com.sun.faces:jsf-api:2.2.13")
+    compile("com.sun.faces:jsf-impl:2.2.13")
 
-    //compile "org.apache.tomcat.embed:tomcat-embed-core:8.0.32"
-    //compile "org.apache.tomcat.embed:tomcat-embed-logging-juli:8.0.32"
-    compile "org.apache.tomcat.embed:tomcat-embed-jasper:8.0.32"
+    compile("javax.el:el-api:2.2")
+    compile("org.glassfish.web:el-impl:2.2")
+
+    providedRuntime("org.apache.tomcat.embed:tomcat-embed-jasper:8.0.32")
 }
