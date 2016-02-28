@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:body>
+        <h1>This is the index page</h1>
+        <h:form>
+            <h2>RequestScoped - lives as long as a single HTTP request-response cycle</h2>
+            <h:outputText value="Hallo: #{requestBean.hello}"/>
+            <h:outputText value="Message: #{requestBean.message}"/>
+            <h2>ViewScope - lives as long as you're interacting with the same JSF view</h2>
+            <h:outputText value="Hallo: #{viewBean.hello}"/>
+            <h:outputText value="Message: #{viewBean.message}"/>
+            <h2>SessionScope - lives as long as the established HTTP session</h2>
+            <h:outputText value="Hallo: #{sessionBean.hello}"/>
+            <h:outputText value="Message: #{sessionBean.message}"/>
+            <h2>ApplikationBean -  lives as long as the web application runs</h2>
+            <h:outputText value="Hallo: #{applicationBean.hello}"/>
+            <h:outputText value="Message: #{applicationBean.message}"/>
+            <br/>
+            <br/>
+            <h:commandButton value="Reload (RequestScope should change)" />
+            <br/>
+            <br/>
+            <h:commandButton action="another" value="Go to next Page (ViewScope and RequestScope should change)" />
+        </h:form>
+    </h:body>
+</html>
