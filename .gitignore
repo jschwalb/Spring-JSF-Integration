@@ -1,4 +1,7 @@
-springjsf.iml
-.idea/
-gradle/
-*.iml
+/build
+/gradle
+/.idea
+/.gradle
+/gradlew
+/gradlew.bat
+/springjsf.iml
