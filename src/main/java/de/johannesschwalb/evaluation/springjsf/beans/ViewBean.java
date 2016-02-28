@@ -17,15 +17,15 @@ public class ViewBean implements Serializable {
     @Inject
     private SpringService service;
 
-    public String getHello() {
-        return "Hello from ViewBean!";
-    }
-
     private String message;
 
     @PostConstruct
     public void init() {
         message = service.generateMessage();
+    }
+
+    public String getHello() {
+        return "Hello from ViewBean!";
     }
 
     public String getMessage() {

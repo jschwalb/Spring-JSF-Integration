@@ -14,15 +14,15 @@ public class SessionBean {
     @Inject
     private SpringService service;
 
-    public String getHello() {
-        return "Hello from SessionBean!";
-    }
-
     private String message;
 
     @PostConstruct
     public void init() {
         message = service.generateMessage();
+    }
+
+    public String getHello() {
+        return "Hello from SessionBean!";
     }
 
     public String getMessage() {

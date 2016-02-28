@@ -15,21 +15,15 @@ public class RequestBean {
     @Inject
     private SpringService service;
 
-    public String getHello() {
-        return "Hello from RequestBean!";
-    }
-
     private String message;
 
     @PostConstruct
     public void init() {
-        System.out.println("Constructed RequestBean");
         message = service.generateMessage();
     }
 
-    @PreDestroy
-    public void tearDown() {
-        System.out.println("Destroyed RequestBean");
+    public String getHello() {
+        return "Hello from RequestBean!";
     }
 
     public String getMessage() {
