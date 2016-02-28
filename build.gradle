@@ -17,6 +17,7 @@ repositories {
 }
 
 dependencies {
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
     compile("org.springframework.boot:spring-boot-starter-web")
 
     compile("javax.inject:javax.inject:1")
@@ -26,6 +27,4 @@ dependencies {
 
     compile("javax.el:el-api:2.2")
     compile("org.glassfish.web:el-impl:2.2")
-
-    providedRuntime("org.apache.tomcat.embed:tomcat-embed-jasper:8.0.32")
 }
